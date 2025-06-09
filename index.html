@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Pro - The Ultimate Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <div class="menu-item active" data-section="weather">Weather</div>
+    <!-- <div class="menu-item" data-section="cities">Cities</div> -->
+    <div class="menu-item" data-section="map">Map</div>
+    <!-- <div class="menu-item" data-section="settings">Settings</div> -->
+    <button class="toggle-mode" id="toggleMode">🌙 Dark/Light Mode</button>
+    <div class="favorites" id="favoritesBox">
+      <div id="favoritesList"></div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Weather Section (your original content) -->
+    <div class="main-section active" id="weatherSection">
+      <div class="search-box">
+        <input type="text" id="cityInput" class="search" placeholder="Search for cities" autocomplete="off" />
+        <button class="get-location" id="getLocationBtn">📍 My Location</button>
+        <button class="add-fav-btn" id="addFavBtn" title="Add to favorites">+ Fav</button>
+        <div class="autocomplete" id="autocomplete"></div>
+      </div>
+      <div class="weather-info" id="weatherInfo">
+        <span class="loading" id="loadingWeather" style="display:none;">Loading...</span>
+        <img id="weatherIcon" class="weather-main-icon" src="" alt="Weather Icon" />
+        <div class="weather-info-details">
+          <h2 id="cityName">Madrid</h2>
+          <h3 id="temperature">31° <img id="tempIcon" class="temp-icon" src="" alt="Temp Icon"></h3>
+          <p id="description">Sunny</p>
+        </div>
+      </div>
+      <div id="errorMessage" class="error-message" style="display:none;"></div>
+      <div class="forecast">
+        <h3>Today's Forecast</h3>
+        <div class="forecast-grid" id="hourlyForecast"></div>
+      </div>
+      <div class="air-conditions">
+        <h3>Air Conditions</h3>
+        <p>Real Feel: <span id="realFeel"></span></p>
+        <p>Humidity: <span id="humidity"></span></p>
+        <p>Wind: <span id="wind"></span></p>
+        <p>Chance of Rain: <span id="rainChance"></span></p>
+        <p>UV Index: <span id="uvIndex"></span></p>
+        <p>Visibility: <span id="visibility"></span></p>
+        <p>Pressure: <span id="pressure"></span></p>
+      </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="main-section" id="mapSection">
+      <h2>Weather Map</h2>
+      <div class="map-container">
+        <iframe id="weatherMap" width="100%" height="100%" style="border:0"></iframe>
+      </div>
+    </div>
+
+    <!-- Settings Section -->
+    <div class="main-section" id="settingsSection">
+      <h2>Settings</h2>
+      <div class="settings-option">
+        <label>
+          <input type="checkbox" id="unitToggle"> Use Fahrenheit (°F)
+        </label>
+      </div>
+      <div class="settings-option">
+        <label>
+          <input type="checkbox" id="themeToggle"> Dark Mode
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="seven-day">
+    <h3>7-Day Forecast</h3>
+    <div id="dailyForecast"></div>
+    <div class="dev-links">
+      <a href="#">Contact the Developer</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Made with ❤ and a lot of ☕ by Muhammad Murtaza</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
