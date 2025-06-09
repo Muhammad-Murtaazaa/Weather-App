@@ -2,6 +2,9 @@
 
 A clean, modern, and responsive weather web application that shows real-time weather data, forecasts, air conditions, and more. Built with simplicity and user experience in mind, this app is ideal for anyone who wants quick access to detailed weather information.
 
+## Live Site 
+https://weather-app-kappa-eight-28.vercel.app/
+
 ## 🔍 Features
 
 - 🔎 **City Search with Autocomplete**
