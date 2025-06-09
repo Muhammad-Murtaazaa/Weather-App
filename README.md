@@ -35,7 +35,7 @@ A clean, modern, and responsive weather web application that shows real-time wea
    cd weather-app
    
 ## 📸 Screenshot
-![App Screenshot](Screenshot.png)
+![App Screenshot](ss.png)
 
 ## 🧑‍💻 Contributing
 Contributions are welcome! Feel free to submit issues, feature requests, or pull requests.
