@@ -321,3 +321,21 @@ document.getElementById('unitToggle').addEventListener('change', function() {
 // Initialize
 renderCities();
 if(localStorage.getItem('theme') === 'light') document.body.classList.add('light');
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        await getWeatherByCoords(lat, lon);
+      },
+      () => {
+        // If user denies or error, fallback to lastCity
+        getWeather(Lahore);
+      }
+    );
+  } else {
+    getWeather(Lahore);
+  }
+});
