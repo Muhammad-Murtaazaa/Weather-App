@@ -31,11 +31,11 @@ A clean, modern, and responsive weather web application that shows real-time wea
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/Muhammad-Murtaazaa/Weather-App.git
    cd weather-app
    
 ## 📸 Screenshot
-![App Screenshot](screenshot.png)
+![App Screenshot](Screenshot.png)
 
 ## 🧑‍💻 Contributing
 Contributions are welcome! Feel free to submit issues, feature requests, or pull requests.
